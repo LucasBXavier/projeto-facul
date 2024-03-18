@@ -7,13 +7,10 @@
     <meta name="author" content="Lucas Boareto & Rhoan Barioni">
 
     <link rel="stylesheet" href="styles/img_card_box.css">
+    <link rel="stylesheet" href="./styles/style.css">
 
-    <link rel="stylesheet" href="./styles/nav&copyright.css">
     <link rel="icon" href="./assets/img/favicon/favicon.ico">
     <link rel="shortcut icon" href="./assets/img/favicon/favicon.ico" type="image/x-icon">
-
-    <link rel="stylesheet" href="styles/carousel.css">
-    <script src="js/carousel.js" defer></script>
 
     <title>Panela Mágica</title>
 </head>
@@ -27,6 +24,7 @@
                         <img src="./assets/img/panelaLogo.jpg" alt="Logo">
                     </a>
                 </div>
+                <a href="index.html"><p class="nome-logo">Panela Mágica</p></a>
                 <div class="search-bar">
                     <input type="text" placeholder="Pesquisar">
                 </div>
@@ -36,15 +34,10 @@
                     <a href="#">Celíaco</a>
                 </div>
                 <div class="offcanvas-toggle">
-                    <button class="menu-btn">&#9776</button>
+                    <span class="menu-btn"><ion-icon size="large" name="menu"></ion-icon></span>
                 </div>
                 <div class="offcanvas">
                     <div class="offcanvas-content">
-                        <div class="logo">
-                            <a href="home.html">
-                                <img src="./assets/img/panelaLogo.jpg" alt="Logo">
-                            </a>
-                        </div>
                         <a href="index.html">Home</a>
                         <a href="#">Vegano</a>
                         <a href="#">Celíaco</a>
@@ -65,15 +58,15 @@
 
                     <div class="carousel-container" id="img-caurosel">
 
-                        <img src="https://bowerbird-app.s3.amazonaws.com/production/uploads/image/image/178458/large_X%2BO_EXPAT.ROASTERS_BEACHWALK16-LR.jpg">
+                        <img src="./assets/img/fricasse.jpg" alt="fricassê">
 
-                        <img src="https://i1.sndcdn.com/artworks-000465890313-x6cae8-t500x500.jpg" alt="outro_alanzoka">
+                        <img src="./assets/img/hamburguer.jpg" alt="Hamburguer">
 
-                        <img src="https://pbs.twimg.com/profile_images/944712346500587522/duOz-D8s_400x400.jpg" alt="">
+                        <img src="./assets/img/strogonoff.jpg" alt="Strogonoff">
 
-                        <img src="https://www.liveinformatica.net/wall/wallpapers/031.jpg" alt="">
+                        <img src="" alt="">
 
-                        <img src="https://www.liveinformatica.net/wall/wallpapers/031.jpg" alt="">
+                        <img src="" alt="">
 
                     </div>
 
@@ -90,7 +83,7 @@
 
                     <div id="img-card-title">
 
-                        <h3>Receitasaaaaaaaaaaaaaaaaaa</h3> <hr id="title-img-card-border">
+                        <h3>Receitas</h3> <hr id="title-img-card-border">
 
                     </div>
 
@@ -154,11 +147,14 @@
     <!-- main content -->
     <!-- footer -->
     <footer class="copyright">
-        <p class="copy">All rights reserved 2024 © Panela Mágica | Developed by <a href="https://www.github.com/LucasBXavier/" 
+        <p class="copy">All rights reserved 2024 © Panela Mágica | Developed by <a href="https://github.com/LucasBXavier/" 
            target="_blank">Lucas</a> & <a href="https://github.com/RhoanBarioni" target="_blank">Rhoan</a>
         </p>
     </footer>
     <!-- footer -->
     <script src="./js/main.js"></script>
+    <script src="js/carousel.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

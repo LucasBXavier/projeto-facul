@@ -10,10 +10,6 @@
     margin-bottom: 15px;
 }
 
-#title-img-card-border {
-    margin: 0;
-    max-width: 90vw;
-}
 
 .img-card-box {
     box-sizing: border-box;
@@ -36,6 +32,7 @@
 
 #img-card-img-format {
     width: 100%;
+    height: auto;
     margin-bottom: 20px;
     padding: 0px;
     text-align: center;

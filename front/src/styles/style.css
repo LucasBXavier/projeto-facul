@@ -1,8 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap');
+
+/* essencial */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
 }
+/* essencial */
 
+/* navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -16,6 +27,18 @@ body {
     border-radius: 100%;
 }
 
+.nome-logo{
+    text-decoration: none;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 24px;
+    font-family: "Emilys Candy", serif;
+    font-weight: 400;
+    font-style: normal;
+    display: inline-block;
+    margin-left: 10px;
+}
+
 .search-bar {
     flex-grow: 1;
     text-align: center;
@@ -23,9 +46,10 @@ body {
 
 .search-bar input[type="text"] {
     padding: 8px;
-    width: 40%;
+    width: 50%;
     border-radius: 5px;
     border: none;
+    font-size: 20px;
 }
 
 .search-bar button {
@@ -52,7 +76,9 @@ body {
 .links a:hover{
     color: blue;
 }
+/* fim da navbar */
 
+/* offcanvas */
 .offcanvas {
     position: fixed;
     top: 0;
@@ -64,8 +90,14 @@ body {
     transition: 0.3s;
 }
 
+.offcanvas a:hover{
+    color: blue;
+    transition: color 0.3s ease-in-out;
+}
+
 .menu-btn{
-    background-color: rgba(255, 255, 255, 0.4);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
 }
 
 .offcanvas.active {
@@ -81,12 +113,42 @@ body {
     color: white;
     text-decoration: none;
     margin-bottom: 10px;
+        font-size: 24px;
 }
 
 .offcanvas-toggle {
     display: none;
 }
+/* fim offcanvas */
 
+/* carrossel */
+.carousel {
+    display: flex;
+    align-items: center;
+    margin: 50px auto;
+    min-height: 40vh;
+    /* box-shadow: 2px 2px 100px black; */
+    overflow: hidden;
+    width: 70vw;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    transition: transform 0.5s ease;
+    transform: translateX(0);
+    background-color: black;
+}
+
+#img-caurosel {
+    object-fit: contain;
+    height: auto;
+    max-width: 100%;
+}
+/*  fim do carrossel */
+
+
+/* footer */
 .footer {
     position: fixed;
     left: 0;
@@ -101,9 +163,11 @@ body {
 .copyright{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    text-align: center;
     background-color: #333;
-    padding: 10px 20px;
+    padding: 24px;
+    font-size: 1.5rem;
+    font-weight: 400;
 }
 
 .copy{
@@ -121,9 +185,15 @@ body {
 .copy a:hover{
     color: blue;
 }
+/* fim do footer */
 
+/* media querys */
 @media screen and (max-width: 768px) {
     .links {
+        display: none;
+    }
+
+    .search-bar{
         display: none;
     }
 
