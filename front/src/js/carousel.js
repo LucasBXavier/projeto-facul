@@ -14,4 +14,4 @@ function caurosel(){
 
 }
 
-setInterval(caurosel, 1800);
+setInterval(caurosel, 2800);

@@ -10,7 +10,13 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
+    
 }
+
+/* :root{
+    --cor-primaria:;
+    --cor-secundaria:;
+} */
 /* essencial */
 
 /* navbar */
@@ -18,7 +24,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #242333;
     padding: 10px 20px;
 }
 
@@ -74,7 +80,7 @@ body {
 }
 
 .links a:hover{
-    color: blue;
+    color: #5C4AFF;
 }
 /* fim da navbar */
 
@@ -85,13 +91,13 @@ body {
     left: -300px;
     width: 300px;
     height: 100%;
-    background-color: #333;
+    background-color: #494855;
     overflow-x: hidden;
     transition: 0.3s;
 }
 
 .offcanvas a:hover{
-    color: blue;
+    color: #5C4AFF;
     transition: color 0.3s ease-in-out;
 }
 
@@ -154,7 +160,6 @@ body {
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #333;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -164,7 +169,7 @@ body {
     display: flex;
     justify-content: space-between;
     text-align: center;
-    background-color: #333;
+    background-color: #242333;    
     padding: 24px;
     font-size: 1.5rem;
     font-weight: 400;
@@ -183,9 +188,38 @@ body {
     transition: color 0.3s ease;
 }
 .copy a:hover{
-    color: blue;
+    color: #5C4AFF;
 }
 /* fim do footer */
+
+/* scroll bar */
+body {
+    --sb-track-color: #ffffff;
+    --sb-thumb-color: #000603;
+    --sb-size: 10px;
+}
+
+body::-webkit-scrollbar {
+    width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 1px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 1px;
+
+}
+
+@supports not selector(::-webkit-scrollbar) {
+    body {
+        scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
+}
+/* fim scroll bar */
 
 /* media querys */
 @media screen and (max-width: 768px) {
