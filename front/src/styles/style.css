@@ -94,6 +94,7 @@ body {
     background-color: #494855;
     overflow-x: hidden;
     transition: 0.3s;
+    z-index: 1;
 }
 
 .offcanvas a:hover{
@@ -132,7 +133,7 @@ body {
     display: flex;
     align-items: center;
     margin: 50px auto;
-    min-height: 40vh;
+    max-height: 40vh;
     /* box-shadow: 2px 2px 100px black; */
     overflow: hidden;
     width: 70vw;
@@ -233,5 +234,28 @@ body::-webkit-scrollbar-thumb {
 
     .offcanvas-toggle {
         display: block;
+    } 
+}
+
+@media screen and (max-width: 1000px){
+
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .offcanvas{
+        width: 20vh;
+    }
+
+    .carousel {
+        height: 40vw;
+        width: 90%;
+    }
+
+    #img-caurosel{
+        height: 100%;
+        width: 50%;
     }
 }
