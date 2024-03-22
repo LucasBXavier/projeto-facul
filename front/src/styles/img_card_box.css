@@ -21,7 +21,7 @@
 #img-card-box-content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    background-color: rgb(255, 255, 255);
+    background-color: none;
     border-radius: 10px;
     margin: 0px auto;
     align-items: center;
@@ -41,6 +41,7 @@
 #img-card-img-format img{
     width: 90%;
     height: 10%;
+    border-radius: 15px;
 }
 
 #img-card-img-format img:hover {
@@ -56,6 +57,7 @@
     padding: auto;
     margin-top: 5px;
     text-align: center;
+    word-wrap: break-word;
 }
 
 @media screen and (max-width: 1000px){
@@ -89,6 +91,7 @@
 
    #img-card-img-format p{
     font-size: 2ex;
+    word-wrap: break-word;
    }
 }
 
@@ -124,6 +127,7 @@
     
        #img-card-img-format p{
         font-size: 3.4ex;
+        word-wrap: break-word;
        }
 
 }

@@ -10,13 +10,14 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    
 }
 
-/* :root{
-    --cor-primaria:;
-    --cor-secundaria:;
-} */
+
+/* variaveis css (cor, fonte, e outros) */
+:root{
+    --cor-primaria: #242333;
+    --cor-hover:#5C4AFF;
+}
 /* essencial */
 
 /* navbar */
@@ -24,7 +25,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #242333;
+    background-color: var(--cor-primaria);
     padding: 10px 20px;
 }
 
@@ -50,21 +51,39 @@ body {
     text-align: center;
 }
 
-.search-bar input[type="text"] {
-    padding: 8px;
-    width: 50%;
-    border-radius: 5px;
-    border: none;
-    font-size: 20px;
+.input-container {
+    width: 20px;
+    position: relative;
 }
 
-.search-bar button {
-    padding: 8px 15px;
-    border: none;
-    background-color: #4CAF50;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
+.input {
+    width: 50%;
+    height: 40px;
+    padding: 10px;
+    transition: .2s linear;
+    border: 2.5px solid black;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 25px;
+}
+
+.input:focus {
+    outline: none;
+    border: 0.5px solid black;
+    box-shadow: -5px -5px 0px black;
+}
+
+@keyframes anim {
+
+    0%,
+    100% {
+        transform: translateY(calc(-50% - 5px)) scale(1);
+    }
+
+    50% {
+        transform: translateY(calc(-50% - 5px)) scale(1.1);
+    }
 }
 
 .links {
@@ -72,7 +91,7 @@ body {
 }
 
 .links a {
-    color: white;
+    color: #fff;
     text-decoration: none;
     padding: 0 10px;  
     font-size: 20px;
@@ -80,7 +99,8 @@ body {
 }
 
 .links a:hover{
-    color: #5C4AFF;
+    color: var(--cor-hover);
+    
 }
 /* fim da navbar */
 
@@ -91,14 +111,13 @@ body {
     left: -300px;
     width: 300px;
     height: 100%;
-    background-color: #494855;
     overflow-x: hidden;
     transition: 0.3s;
     z-index: 1;
 }
 
 .offcanvas a:hover{
-    color: #5C4AFF;
+    color: var(--cor-hover);
     transition: color 0.3s ease-in-out;
 }
 
@@ -120,7 +139,7 @@ body {
     color: white;
     text-decoration: none;
     margin-bottom: 10px;
-        font-size: 24px;
+    font-size: 24px;
 }
 
 .offcanvas-toggle {
@@ -129,28 +148,65 @@ body {
 /* fim offcanvas */
 
 /* carrossel */
-.carousel {
-    display: flex;
-    align-items: center;
-    margin: 50px auto;
-    max-height: 40vh;
-    /* box-shadow: 2px 2px 100px black; */
-    overflow: hidden;
-    width: 70vw;
+.slideshow-container {
+    max-width: 850px;
+    position: relative;
+    margin: auto;
+    margin-top: 25px;
 }
 
-.carousel-container {
-    display: flex;
-    justify-content: center;
-    transition: transform 0.5s ease;
-    transform: translateX(0);
-    background-color: black;
+.mySlides {
+    display: none;
 }
 
-#img-caurosel {
-    object-fit: contain;
-    height: auto;
-    max-width: 100%;
+.mySlides img{
+    border-radius: 20px;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 30px 30px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 30px 0 0 30px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.active,
+.dot:hover {
+    background-color: var(--cor-primaria);
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
 }
 /*  fim do carrossel */
 
@@ -170,7 +226,7 @@ body {
     display: flex;
     justify-content: space-between;
     text-align: center;
-    background-color: #242333;    
+    background-color: var(--cor-primaria);    
     padding: 24px;
     font-size: 1.5rem;
     font-weight: 400;
@@ -189,7 +245,7 @@ body {
     transition: color 0.3s ease;
 }
 .copy a:hover{
-    color: #5C4AFF;
+    color: var(--cor-hover);
 }
 /* fim do footer */
 
@@ -224,6 +280,11 @@ body::-webkit-scrollbar-thumb {
 
 /* media querys */
 @media screen and (max-width: 768px) {
+    .slideshow-container{
+        margin-top:15px;
+        width: 390px;
+    }
+    
     .links {
         display: none;
     }
@@ -235,6 +296,15 @@ body::-webkit-scrollbar-thumb {
     .offcanvas-toggle {
         display: block;
     } 
+
+    .copyright{
+        padding: 12px;
+        padding-bottom: 0;
+    }
+
+    .copy{
+        font-size: 15px;
+    }
 }
 
 @media screen and (max-width: 1000px){
@@ -246,16 +316,6 @@ body::-webkit-scrollbar-thumb {
     }
 
     .offcanvas{
-        width: 20vh;
-    }
-
-    .carousel {
-        height: 40vw;
-        width: 90%;
-    }
-
-    #img-caurosel{
-        height: 100%;
-        width: 50%;
+        width: 26vh;
     }
 }
