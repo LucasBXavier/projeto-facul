@@ -1,4 +1,4 @@
-## Pagina de Receitas que consome API para projeto da faculdade
+## Pagina de Receitas com consumo API para projeto da faculdade
 
 <p>
     Utilizamos as seguintes tecnologias para desenvolver a aplicação no front-end
