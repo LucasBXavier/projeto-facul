@@ -17,3 +17,7 @@
     <img src="https://skillicons.dev/icons?i=cs,net,sqlite" />
   </a>
 </p>
+
+##
+
+feito em colaboração com <a href="https://github.com/LucasBXavier"> Lucas </a>, <a href="https://github.com/RhoanBarioni"> Rhoan </a> e <a href="https://github.com/Rullesz"> Mateus </a>
