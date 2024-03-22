@@ -20,4 +20,4 @@
 
 ##
 
-feito em colaboração com <a href="https://github.com/LucasBXavier"> Lucas </a>, <a href="https://github.com/RhoanBarioni"> Rhoan </a> e <a href="https://github.com/Rullesz"> Mateus </a>
+feito em colaboração com <a href="https://github.com/LucasBXavier" target="_blank"> Lucas </a>, <a href="https://github.com/RhoanBarioni" target="_blank"> Rhoan </a> e <a href="https://github.com/Rullesz" target="_blank"> Mateus </a>
