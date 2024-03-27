@@ -28,6 +28,18 @@ namespace PanelaMagica.API.Data.Migrations
                     b.Property<string>("Ingrediente1")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Ingrediente10")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Ingrediente11")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Ingrediente12")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Ingrediente13")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Ingrediente2")
                         .HasColumnType("TEXT");
 
@@ -41,6 +53,15 @@ namespace PanelaMagica.API.Data.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Ingrediente6")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Ingrediente7")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Ingrediente8")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Ingrediente9")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("NomeDaReceita")
