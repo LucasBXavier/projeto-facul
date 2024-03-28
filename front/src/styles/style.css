@@ -10,6 +10,7 @@
 body {
     font-family: Arial, sans-serif;
     margin: 0;
+    background-color: #000000;
 }
 
 
@@ -87,21 +88,51 @@ body {
 }
 
 .links {
-    display: flex;
+    list-style:none;
+    float:left;
+    margin: 0;
+    padding: 0;
+}
+
+.links li{
+    position:relative;
+    float:left;
+    list-style-type: none;
 }
 
 .links a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     padding: 0 10px;  
     font-size: 20px;
     transition: color 0.3s ease;
+    text-decoration: none;
+    display: block;
+    text-align: center;
 }
 
 .links a:hover{
     color: var(--cor-hover);
-    
 }
+
+.links li  ul{
+    position:absolute;
+    top:25px;
+    left:0;
+    display:none;
+    text-align: center;
+    margin: 0;
+    padding: 2px;
+}
+
+ .links li:hover ul, .links li.over ul{display:block;}
+
+ .links li ul li{
+    display:block;
+    width:100%;
+}
+
+
 /* fim da navbar */
 
 /* offcanvas */
@@ -145,6 +176,45 @@ body {
 .offcanvas-toggle {
     display: none;
 }
+
+.offcanvas li {
+    position: relative;
+    float: left;
+    list-style-type: none;
+}
+
+.offcanvas a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+}
+
+.offcanvas a:hover {
+    color: var(--cor-hover);
+}
+
+.offcanvas li ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    background-color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.offcanvas li:hover ul,
+.offcanvas li.over ul {
+    display: block;
+}
+
+.offcanvas li ul li {
+    display: block;
+    width: 100%;
+}
+
 /* fim offcanvas */
 
 /* carrossel */
