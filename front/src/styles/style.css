@@ -309,6 +309,11 @@ body::-webkit-scrollbar-thumb {
 
 @media screen and (max-width: 1000px){
 
+    .slideshow-container {
+        margin-top: 15px;
+        width: 390px;
+    }
+
     body {
         margin: 0;
         padding: 0;
@@ -317,5 +322,15 @@ body::-webkit-scrollbar-thumb {
 
     .offcanvas{
         width: 26vh;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .slideshow-container {
+        margin-top: 0;
+        width: auto;
+    }
+    .mySlides img {
+        border-radius: 0;
     }
 }
