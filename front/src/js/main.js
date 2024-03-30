@@ -1,3 +1,7 @@
+document.getElementById("year").innerHTML = new Date().getFullYear();
+
+
+
 //off canvas
 document.addEventListener('DOMContentLoaded', function() {
     const menuBtn = document.querySelector('.menu-btn');
