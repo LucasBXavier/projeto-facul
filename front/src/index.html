@@ -32,34 +32,18 @@
                 <div class="search-bar">
                     <input class="input" type="text" placeholder="Pesquisar" autocomplete="on">
                 </div>
-                <div class="links" id="dropsdown-box">
-                    <div class="dropdown-first">
-                        <a href="index.html" id="drop-first-text">Doces</a>
-                        <div class="first-link">
-                            <a href="">aaa</a>
-                            <a href="">aaa</a>
-                            <a href="">aaa</a>
-                        </div>
-                    </div>
-                    <div class="dropdown-second">
-                        <a href="#" id="drop-second-text">Vegano</a>
-                        <div class="second-link">
-                            <a href="">aaa</a>
-                            <a href="">aaa</a>
-                            <a href="">aaa</a>
-                        </div>
-                    </div>
-                    <div class="dropdown-third">
-                        <a href="#" id="drop-third-text">Fitness</a>
-                        <div class="third-link">
-                            <a href="">aaa</a>
-                            <a href="">aaa</a>
-                            <a href="">aaa</a>
-                        </div>
-                    </div>
+                <div class="links">
+
+                    <a href="#doces">Doces</a>
+                    <a href="#vegano">Vegano</a>
+                    <a href="#fitness">Fitness</a>
+
                 </div>
-                <div class="offcanvas-toggle">
-                    <span class="menu-btn"><ion-icon size="large" name="menu"></ion-icon></span>
+                <!-- <div class="offcanvas-toggle"> -->
+                <div class="offcanvas-btn" onclick="Function(this)">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
                 </div>
                 <div class="offcanvas">
                     <div class="offcanvas-content">
@@ -67,27 +51,12 @@
                         <hr id="title-img-card-border">
                         <br>
                         <ul>
-                            <li><a href="index.html">Doces</a>
-                                <ul>
-                                    <li><a href="">asd</a></li>
-                                    <li><a href="">asd</a></li>
-                                    <li><a href="">asd</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Vegano</a>
-                                <ul>
-                                    <li><a href="">asd</a></li>
-                                    <li><a href="">asd</a></li>
-                                    <li><a href="">asd</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">Fit</a>
-                                <ul>
-                                    <li><a href="">asd</a></li>
-                                    <li><a href="">asd</a></li>
-                                    <li><a href="">asd</a></li>
-                                </ul>
-                            </li>
+                            <a href="#doces">Doces</a>
+
+                            <a href="#vegano">Vegano</a>
+
+                            <a href="#fitness">Fitness</a>
+
                         </ul>
                     </div>
                 </div>
@@ -132,7 +101,73 @@
 
                 <div id="img-card-title">
 
-                    <h3>Receitas</h3>
+                    <h3 class="titulo_receita">Receitas</h3>
+                    <hr id="title-img-card-border">
+
+                </div>
+
+                <div id="img-card-box-content">
+
+                    <div>
+                        <div id="img-card-img-format">
+                            <img src="./image/fricasse.jpg" alt="">
+                            <p>Fricassê</p>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <div id="img-card-img-format">
+                            <img src="./image/hamburguer.jpg" alt="">
+                            <p>Hamburguer</p>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <div id="img-card-img-format">
+                            <img src="./image/strogonoff.jpg" alt="">
+                            <p>Strogonoff</p>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <div id="img-card-img-format">
+                            <img src="./image/cabonara.jpg" alt="">
+                            <p>Carbonara</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div id="img-card-img-format">
+                            <img src="https://i.ytimg.com/vi/f9501PpO61E/maxresdefault.jpg" alt="">
+                            <p>asdasdasd</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div id="img-card-img-format">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPBbwUV4q_TF_76885nJplwWltnbu6Tn3xE7j_OL2Un8j-GhpexkC-J4ljxL1hIDdAISA&usqp=CAU"
+                                alt="">
+                            <p>asdasdasd</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div><br>
+        </section>
+        <!-- img-cards GRID -->
+
+        <!-- doces -->
+        <section id="doces">
+
+            <div class="img-card-box">
+
+                <div id="img-card-title">
+
+                    <h3 class="titulo_receita">Doces</h3>
                     <hr id="title-img-card-border">
 
                 </div>
@@ -190,11 +225,141 @@
 
             </div><br>
         </section>
-        <!-- img-cards GRID -->
+        <!-- doces -->
 
-        <section>
+        <!-- vegano -->
+        <section id="vegano">
 
+            <div class="img-card-box">
+
+                <div id="img-card-title">
+
+                    <h3 class="titulo_receita">Vegano</h3>
+                    <hr id="title-img-card-border">
+
+                </div>
+
+                <div id="img-card-box-content">
+
+                    <div>
+                        <div id="img-card-img-format">
+                            <img src="https://i.ytimg.com/vi/f9501PpO61E/maxresdefault.jpg" alt="">
+                            <p>asdasdasd</p>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <div id="img-card-img-format">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPBbwUV4q_TF_76885nJplwWltnbu6Tn3xE7j_OL2Un8j-GhpexkC-J4ljxL1hIDdAISA&usqp=CAU"
+                                alt="">
+                            <p>asdasdasd</p>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <div id="img-card-img-format">
+                            <img src="https://i.ytimg.com/vi/f9501PpO61E/maxresdefault.jpg" alt="">
+                            <p>asdasdasd</p>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <div id="img-card-img-format">
+                            <img src="https://i.ytimg.com/vi/f9501PpO61E/maxresdefault.jpg" alt="">
+                            <p>asdasdasd</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div id="img-card-img-format">
+                            <img src="https://i.ytimg.com/vi/f9501PpO61E/maxresdefault.jpg" alt="">
+                            <p>asdasdasd</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div id="img-card-img-format">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPBbwUV4q_TF_76885nJplwWltnbu6Tn3xE7j_OL2Un8j-GhpexkC-J4ljxL1hIDdAISA&usqp=CAU"
+                                alt="">
+                            <p>asdasdasd</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div><br>
         </section>
+        <!-- vegano -->
+
+        <!-- fitness -->
+        <section id="fitness">
+
+            <div class="img-card-box">
+
+                <div id="img-card-title">
+
+                    <h3 class="titulo_receita">Fitness</h3>
+                    <hr id="title-img-card-border">
+
+                </div>
+
+                <div id="img-card-box-content">
+
+                    <div>
+                        <div id="img-card-img-format">
+                            <img src="https://i.ytimg.com/vi/f9501PpO61E/maxresdefault.jpg" alt="">
+                            <p>asdasdasd</p>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <div id="img-card-img-format">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPBbwUV4q_TF_76885nJplwWltnbu6Tn3xE7j_OL2Un8j-GhpexkC-J4ljxL1hIDdAISA&usqp=CAU"
+                                alt="">
+                            <p>asdasdasd</p>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <div id="img-card-img-format">
+                            <img src="https://i.ytimg.com/vi/f9501PpO61E/maxresdefault.jpg" alt="">
+                            <p>asdasdasd</p>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <div id="img-card-img-format">
+                            <img src="https://i.ytimg.com/vi/f9501PpO61E/maxresdefault.jpg" alt="">
+                            <p>asdasdasd</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div id="img-card-img-format">
+                            <img src="https://i.ytimg.com/vi/f9501PpO61E/maxresdefault.jpg" alt="">
+                            <p>asdasdasd</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div id="img-card-img-format">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPBbwUV4q_TF_76885nJplwWltnbu6Tn3xE7j_OL2Un8j-GhpexkC-J4ljxL1hIDdAISA&usqp=CAU"
+                                alt="">
+                            <p>asdasdasd</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div><br>
+        </section>
+        <!-- fitness -->
 
     </article>
     <!-- main content -->
@@ -211,8 +376,6 @@
 
     <script src="./js/main.js"></script>
     <script src="./js/carousel.js" defer></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>

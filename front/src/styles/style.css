@@ -9,10 +9,12 @@
 
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #000000;
+     background-color: #FFF5E0; 
 }
 
+html{
+    scroll-behavior: smooth;
+}
 
 /* variaveis css (cor, fonte, e outros) */
 :root{
@@ -28,6 +30,11 @@ body {
 
 /* navbar */
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -37,7 +44,7 @@ body {
 }
 
 .logo img {
-    height: 50px;
+    height: 60px;
     border-radius: 100%;
 }
 
@@ -45,7 +52,7 @@ body {
     text-decoration: none;
     color: white;
     letter-spacing: 2px;
-    font-size: 24px;
+    font-size: 34px;
     font-family: "Emilys Candy", serif;
     font-weight: 400;
     font-style: normal;
@@ -92,140 +99,55 @@ body {
         transform: translateY(calc(-50% - 5px)) scale(1.1);
     }
 }
-#dropdown-box{
-    margin: 0 auto;
-    padding: 0;
-    text-align: center;
-    color: var(--font-color);
+.links {
+    display: flex;
+}
+
+.links a {
+    color: #fff;
     text-decoration: none;
-}
-/* The first text in the dropdown */
-.dropdown-first {
-    color: var(--font-color);
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    position: relative;
-    display: inline-block;
-    margin: auto;
-    text-align: center;
+    padding: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s ease;
 }
 
-#drop-first-text{
-    color: var(--font-color);
-    text-decoration: none;
+.links a:hover {
+    color: var(--cor-hover);
+
 }
-
-.first-link{
-    display: none;
-    position: absolute;
-    background-color: var(--bg-cor);
-    max-width: 100%;
-    box-shadow: 0px 0px 16px 3px rgb(47, 0, 255);
-    z-index: 1;
-    word-wrap: break-word;
-    margin-top: 4px;
-}
-
-.first-link a {
-    color: var(--font-color);
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-
-  .first-link a:hover {background-color: var(--hover-bg);}
-
-  .dropdown-first:hover .first-link {display: block;}
-
-  /* .dropdown-first:hover {background-color: var(--hover-bg);} */
-/* end */
-/* Second text in the dropdown */
-
-.dropdown-second {
-    color: var(--font-color);
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    position: relative;
-    display: inline-block;
-    margin: auto;
-    text-align: center;
-}
-
-#drop-second-text{
-    color: var(--font-color);
-    text-decoration: none;
-}
-
-.second-link{
-    display: none;
-    position: absolute;
-    background-color: var(--bg-cor);
-    max-width: 100%;
-    box-shadow: 0px 0px 16px 3px rgb(47, 0, 255);
-    z-index: 1;
-    word-wrap: break-word;
-    margin-top: 4px;
-}
-
-.second-link a {
-    color: var(--font-color);
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-
-  .second-link a:hover {background-color: var(--hover-bg);}
-
-  .dropdown-second:hover .second-link {display: block;}
-
-  /* .dropdown-second:hover {background-color: var(--hover-bg);} */
-/* end */
-/* third text in the dropdown */
-
-.dropdown-third {
-    color: var(--font-color);
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    position: relative;
-    display: inline-block;
-    margin: auto;
-    text-align: center;
-}
-
-#drop-third-text{
-    color: var(--font-color);
-    text-decoration: none;
-}
-
-.third-link{
-    display: none;
-    position: absolute;
-    background-color: var(--bg-cor);
-    max-width: 100%;
-    box-shadow: 0px 0px 16px 3px rgb(47, 0, 255);
-    z-index: 1;
-    word-wrap: break-word;
-    margin-top: 4px;
-}
-
-.third-link a {
-    color: var(--font-color);
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-
-  .third-link a:hover {background-color: var(--hover-bg);}
-
-  .dropdown-third:hover .third-link {display: block;}
-
-  /* .dropdown-third:hover {background-color: var(--hover-bg);} */
-  /* end */
-
 /* fim da navbar */
+
+/* btn hamburguer */
+.offcanvas-btn {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #ffffff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+/* btn hamburguer */
 
 /* offcanvas */
 .offcanvas {
@@ -269,7 +191,7 @@ body {
     display: none;
 }
 
-.offcanvas li {
+.offcanvas ul {
     position: relative;
     float: left;
     list-style-type: none;
@@ -279,7 +201,7 @@ body {
     display: block;
     padding: 10px;
     text-decoration: none;
-    color: #000;
+    color: #fff;
 }
 
 .offcanvas a:hover {
@@ -291,7 +213,7 @@ body {
     top: 100%;
     left: 0;
     display: none;
-    background-color: #fff;
+    background-color: var(--bg-cor);    
     text-align: center;
     margin: 0;
     padding: 0;
@@ -314,15 +236,11 @@ body {
     max-width: 850px;
     position: relative;
     margin: auto;
-    margin-top: 25px;
+    margin-top: 100px;
 }
 
 .mySlides {
     display: none;
-}
-
-.mySlides img{
-    border-radius: 20px;
 }
 
 .prev,
@@ -447,6 +365,14 @@ body::-webkit-scrollbar-thumb {
         width: 100%;
     }
 
+    .nome-logo{
+        font-size: 30px;
+    }
+
+    .offcanvas .nome-logo{
+        font-size: 25px;
+    }
+
     .slideshow-container{
         margin-top:15px;
         width: 390px;
@@ -470,7 +396,10 @@ body::-webkit-scrollbar-thumb {
     }
 
     .copy{
-        font-size: 15px;
+        font-size: 16px;
+    }
+    .titulo_receita{
+        font-size: 30px;
     }
 }
 
@@ -494,10 +423,16 @@ body::-webkit-scrollbar-thumb {
 
 @media screen and (max-width: 900px) {
     .slideshow-container {
-        margin-top: 0;
+        margin-top: 19%;
         width: auto;
     }
     .mySlides img {
         border-radius: 0;
+    }
+}
+
+@media screen and (min-width: 785px) {
+    .offcanvas-btn{
+        display: none;
     }
 }
