@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PanelaMagica.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f1dddb060a6648e1b9957ce7eedf064a155025d9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1167c843d1ba8dfc9eb520baac1d5c59f4a6cb76")]
 [assembly: System.Reflection.AssemblyProductAttribute("PanelaMagica.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PanelaMagica.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
