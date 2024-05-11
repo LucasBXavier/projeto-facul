@@ -367,6 +367,7 @@ body::-webkit-scrollbar-thumb {
 
     .nome-logo{
         font-size: 30px;
+        /* margin-top: 20px; */
     }
 
     .offcanvas .nome-logo{
