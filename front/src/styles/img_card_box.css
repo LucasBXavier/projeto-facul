@@ -3,6 +3,44 @@
     --cor-text-normais: #ffffff;
 }
 
+/* MODAL */
+
+.button_modal{
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border: 0px transparent;
+    transition: none;
+    outline: none;
+    box-shadow: none;
+    text-decoration: none;
+    border-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.button_modal:focus{
+    background-color: transparent;
+    border: 0px transparent;
+    transition: none;
+    outline: none;
+    box-shadow: none;
+    text-decoration: none;
+    border-style: none;
+}
+
+.button_modal:hover{
+    background-color: transparent;
+    border: 0px transparent;
+    transition: none;
+    outline: none;
+    box-shadow: none;
+    text-decoration: none;
+    border-style: none;
+}
+
+/* BODY */
+
 #img-card-title {
     margin: 20px auto;
     text-align: center;
@@ -114,6 +152,7 @@
         width: 100vw;
         height: 80%; 
         text-align: center;
+        margin: auto;
        }
     
        #img-card-title {
@@ -125,6 +164,7 @@
         column-gap: 2%;
         display: inline-block; 
         width: 95%;
+        height: 100%;
        }
     
        #img-card-img-format img{
