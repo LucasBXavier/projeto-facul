@@ -1,48 +1,40 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
-  selector: 'app-slideshow',
-  templateUrl: './slideshow.component.html',
-  styleUrls: ['./slideshow.component.css']
+  selector: 'app-carrossel',
+  templateUrl: './carrossel.component.html',
+  styleUrls: ['./carrossel.component.css']
 })
-export class SlideshowComponent implements OnInit {
-  slideIndex = 0;
-  slides: any[] = []; // Adicione seus slides aqui
+export class CarrosselComponent implements OnInit, OnDestroy {
+  images = [
+    { src: "assets/image/fricasse.jpg", alt: "Fricassé" },
+    { src: "assets/image/hamburguer.jpg", alt: "Hambúrguer" },
+    { src: "assets/image/strogonoff.jpg", alt: "Strogonoff" }
+  ];
   currentIndex = 0;
-  slideshowTimeout: any;
+  interval: any;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.showSlides();
+    this.startAutoSlide();
   }
 
-  showSlides(): void {
-    this.slideIndex++;
-    this.showCurrentSlide();
-    this.slideshowTimeout = setTimeout(() => this.showSlides(), 8000);
+  nextSlide(): void {
+    this.currentIndex = (this.currentIndex + 1) % this.images.length;
   }
 
-  showCurrentSlide(): void {
-    const slides = document.getElementsByClassName("mySlides");
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-    }
-    if (this.slideIndex > slides.length) { this.slideIndex = 1; }
-    else if (this.slideIndex < 1) { this.slideIndex = slides.length; }
-    this.currentIndex = this.slideIndex - 1;
+  prevSlide(): void {
+    this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
   }
 
-  plusSlides(n: number): void {
-    this.slideIndex += n;
-    this.showCurrentSlide();
+  startAutoSlide(): void {
+    this.interval = setInterval(() => {
+      this.nextSlide();
+    }, 8000);
   }
 
-  onMouseOver(): void {
-    clearTimeout(this.slideshowTimeout);
-  }
-
-  onMouseOut(): void {
-    this.showSlides();
+  ngOnDestroy(): void {
+    clearInterval(this.interval);
   }
 }
