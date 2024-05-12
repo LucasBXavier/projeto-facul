@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-carrossel',
@@ -6,35 +6,47 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./carrossel.component.css']
 })
 export class CarrosselComponent implements OnInit {
-  slideIndex: number = 1;
+  @ViewChild('slidesContainer') slidesContainer!: ElementRef;
+  slides: any[] = []; // Adicione seus slides aqui
+  currentIndex = 0;
+  slideshowTimeout: any;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.showSlides(this.slideIndex);
+    this.showSlides();
+  }
+
+  showSlides(): void {
+    this.currentIndex++;
+    this.showCurrentSlide();
+    this.slideshowTimeout = setTimeout(() => this.showSlides(), 8000);
+  }
+
+  showCurrentSlide(): void {
+    const slides = this.slidesContainer.nativeElement.getElementsByClassName("mySlides");
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    if (this.currentIndex > slides.length) { this.currentIndex = 1; }
+    else if (this.currentIndex < 1) { this.currentIndex = slides.length; }
+    slides[this.currentIndex - 1].style.display = "block";
   }
 
   plusSlides(n: number): void {
-    this.showSlides(this.slideIndex += n);
+    this.currentIndex += n;
+    this.showCurrentSlide();
   }
 
-  currentSlide(n: number): void {
-    this.showSlides(this.slideIndex = n);
+  onMouseOver(): void {
+    clearTimeout(this.slideshowTimeout);
   }
 
-  showSlides(n: number): void {
-    let i: number;
-    let slides: HTMLCollectionOf<Element> = document.getElementsByClassName("mySlides");
-    let dots: HTMLCollectionOf<Element> = document.getElementsByClassName("dot");
-    if (n > slides.length) { this.slideIndex = 1; }
-    if (n < 1) { this.slideIndex = slides.length; }
-    for (i = 0; i < slides.length; i++) {
-      (slides[i] as HTMLElement).style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-      (dots[i] as HTMLElement).className = (dots[i] as HTMLElement).className.replace(" active", "");
-    }
-    (slides[this.slideIndex - 1] as HTMLElement).style.display = "block";
-    (dots[this.slideIndex - 1] as HTMLElement).className += " active";
+  onMouseOut(): void {
+    this.showSlides();
+  }
+
+  ngOnDestroy(): void {
+    clearTimeout(this.slideshowTimeout);
   }
 }
