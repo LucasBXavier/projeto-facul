@@ -1,24 +1,12 @@
 <section>
   <div class="slideshow-container">
-    <div class="mySlides" *ngFor="let slide of slides; let i = index"
-      [style.display]="currentIndex === i ? 'block' : 'none'">
-      <div class="slideshow-container">
-        <div class="mySlides fade">
-          <img src="assets/image/carbonara.jpg" style="width:100%" alt="Fricassé">
-        </div>
-
-        <div class="mySlides fade">
-          <img src="assets/image/hamburguer.jpg" style="width:100%" alt="Hambúrguer">
-        </div>
-
-        <div class="mySlides fade">
-          <img src="assets/image/strogonoff.jpg" style="width:100%" alt="Strogonoff">
-        </div>
-
-        <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
-        <a class="next" (click)="plusSlides(1)">&#10095;</a>
-      </div>
+    <div *ngFor="let image of images; let i = index" class="mySlides"
+      [style.display]="i === currentIndex ? 'block' : 'none'">
+      <img [src]="image.src" style="width:100%" [alt]="image.alt">
     </div>
+
+    <a class="prev" (click)="prevSlide()">&#10094;</a>
+    <a class="next" (click)="nextSlide()">&#10095;</a>
   </div>
   <br>
 </section>

@@ -1,52 +1,42 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'app-carrossel',
   templateUrl: './carrossel.component.html',
   styleUrls: ['./carrossel.component.css']
 })
-export class CarrosselComponent implements OnInit {
-  @ViewChild('slidesContainer') slidesContainer!: ElementRef;
-  slides: any[] = []; // Adicione seus slides aqui
+export class CarrosselComponent implements OnInit, OnDestroy {
+  images = [
+    { src: "assets/image/fricasse.jpg", alt: "Fricassé" },
+    { src: "assets/image/hamburguer.jpg", alt: "Hambúrguer" },
+    { src: "assets/image/strogonoff.jpg", alt: "Strogonoff" },
+    { src: "assets/image/brownie.jpg", alt: "brownie"},
+    {src: "assets/image/bolo_cenoura.jpg", alt: "bolo de cenoura"}
+  ];
   currentIndex = 0;
-  slideshowTimeout: any;
+  interval: any;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.showSlides();
+    this.startAutoSlide();
   }
 
-  showSlides(): void {
-    this.currentIndex++;
-    this.showCurrentSlide();
-    this.slideshowTimeout = setTimeout(() => this.showSlides(), 8000);
+  nextSlide(): void {
+    this.currentIndex = (this.currentIndex + 1) % this.images.length;
   }
 
-  showCurrentSlide(): void {
-    const slides = this.slidesContainer.nativeElement.getElementsByClassName("mySlides");
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    if (this.currentIndex > slides.length) { this.currentIndex = 1; }
-    else if (this.currentIndex < 1) { this.currentIndex = slides.length; }
-    slides[this.currentIndex - 1].style.display = "block";
+  prevSlide(): void {
+    this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
   }
 
-  plusSlides(n: number): void {
-    this.currentIndex += n;
-    this.showCurrentSlide();
-  }
-
-  onMouseOver(): void {
-    clearTimeout(this.slideshowTimeout);
-  }
-
-  onMouseOut(): void {
-    this.showSlides();
+  startAutoSlide(): void {
+    this.interval = setInterval(() => {
+      this.nextSlide();
+    }, 8000);
   }
 
   ngOnDestroy(): void {
-    clearTimeout(this.slideshowTimeout);
+    clearInterval(this.interval);
   }
 }
