@@ -39,6 +39,83 @@
   border-style: none;
 }
 
+.modal{
+  height: 100vh;
+  width: 100vw;
+  max-height: none;
+  margin: auto;
+}
+
+.modal-dialog{
+  height: 100vh;
+  width: 100vw;
+  max-width: none;
+  max-height: none;
+}
+
+.modal-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  max-width: 85%;
+  margin-top: 30px;
+  margin: auto;
+}
+
+.close{
+  margin-top: 5px;
+  position: absolute;
+  right: 0px;
+  left: 845px;
+  top: -15px;
+  outline: none;
+}
+
+.modal-title{
+  margin-bottom: 2px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.modal-body{
+  height: 100%;
+  margin: 10px 30px;
+
+  & ol, li{
+    text-decoration: none;
+    list-style: none;
+  }
+
+  & ol{
+    font-size: 18px;
+  }
+
+  & li{
+    font-size: 15px;
+    margin-top: 5px;
+  }
+}
+
+.modal-body ol li:first-child{
+  margin-top: 5px;
+}
+
+.modal-body ol:last-child{
+  margin-top: 20px;
+}
+
+.modal-footer{
+  margin-bottom: 15px;
+
+  & button{
+    margin: 0px 10px;
+    padding: 3px;
+  }
+
+}
+
 /* BODY */
 
 #img-card-title {

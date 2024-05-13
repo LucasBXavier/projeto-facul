@@ -241,7 +241,7 @@ html {
   max-width: 850px;
   position: relative;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 150px;
 }
 
 .mySlides {
@@ -419,7 +419,8 @@ body::-webkit-scrollbar-thumb {
 
   .slideshow-container {
     margin-top: 15px;
-    width: 390px;
+    width: 80%;
+    margin-top: 19%;
   }
 
   body {
@@ -436,7 +437,7 @@ body::-webkit-scrollbar-thumb {
 @media screen and (max-width: 900px) {
   .slideshow-container {
     margin-top: 19%;
-    width: auto;
+    width: 80%;
   }
 
   .mySlides img {
