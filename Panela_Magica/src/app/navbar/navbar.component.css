@@ -1,0 +1,311 @@
+/* navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor-primaria);
+    padding: 10px 20px;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.logo img {
+    height: 60px;
+    border-radius: 100%;
+}
+  
+.nome-logo {
+    text-decoration: none;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 34px;
+    font-family: "Emilys Candy", serif;
+    font-weight: 400;
+    font-style: normal;
+    display: inline-block;
+    margin-left: 20px;
+    margin-bottom: 0;
+}
+  
+.search-bar {
+    flex-grow: 1;
+    text-align: center;
+}
+  
+.input {
+    width: 50%;
+    height: 40px;
+    padding: 10px;
+    transition: .2s linear;
+    border: 2.5px solid black;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 25px;
+}
+  
+.input:focus {
+    outline: none;
+    border: 0.5px solid black;
+    box-shadow: -5px -5px 0px black;
+}
+  
+.links {
+    display: flex;
+}
+  
+.links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+  
+.links a:hover {
+    color: var(--cor-hover);
+}
+  
+/* btn hamburguer */
+.offcanvas-btn {
+    display: inline-block;
+    cursor: pointer;
+}
+  
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #ffffff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+  
+/* Rotate first bar */
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-315deg);
+}
+  
+/* Fade out the second bar */
+.change .bar2 {
+    opacity: 0;
+    transform: translate(0, 11px) rotate(-315deg);
+    transition: -1s linear;
+}
+  
+/* Rotate last bar */
+.change .bar3 {
+    transform: translate(0, -11px) rotate(315deg);
+}
+  
+/* offcanvas */
+.offcanvas {
+    position: fixed;
+    top: 0;
+    left: -300px; /*-300px*/
+    width: 300px;
+    height: 100%;
+    /* background-color: black;  temq  aogar */
+    overflow-x: hidden;
+    transition: 0.3s;
+    z-index: 1;
+}
+  
+.offcanvas-content {
+    padding: 20px;
+}
+  
+.offcanvas-content a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+  
+.offcanvas ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+  
+.offcanvas a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+  
+.offcanvas a:hover {
+    color: var(--cor-hover);
+}
+  
+.offcanvas li ul {
+    display: none;
+    background-color: var(--bg-cor);
+    text-align: center;
+}
+
+.offcanvas.active {
+    left: 0;
+    width: 50%;
+}
+  
+.offcanvas li:hover ul {
+    display: block;
+}
+  
+
+.offcanvas_copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 90%;
+    color: #5a5a5a93;
+
+    & p{
+        font-size: 30px;
+        margin: 0;
+        padding: 0;
+        color: inherit;
+    }
+}
+
+.offcanvas_copyright a, span{
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: inherit;
+}
+
+.offcanvas_copyright a:hover{
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.356);
+    transition: 1s linear;
+}
+  
+  @keyframes anim {
+  
+    0%,
+    100% {
+      transform: translateY(calc(-50% - 5px)) scale(1);
+    }
+  
+    50% {
+      transform: translateY(calc(-50% - 5px)) scale(1.1);
+    }
+  }
+  
+  .links {
+    display: flex;
+  }
+  
+  .links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 10px;
+    font-size: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .links a:hover {
+    color: var(--cor-hover);
+  
+  }
+
+
+  /* media querys */
+@media screen and (max-width: 768px) {
+
+    .navbar {
+      width: 100%;
+    }
+  
+    .nome-logo {
+      font-size: 30px;
+      /* margin-top: 20px; */
+    }
+  
+    .offcanvas .nome-logo {
+      font-size: 25px;
+    }
+  
+    .slideshow-container {
+      margin-top: 15px;
+      width: 390px;
+    }
+  
+    .links {
+      display: none;
+    }
+  
+    .search-bar {
+      display: none;
+    }
+  
+    .offcanvas-toggle {
+      display: block;
+    }
+  
+    .copyright {
+      padding: 12px;
+      padding-bottom: 0;
+    }
+  
+    .copy {
+      font-size: 16px;
+    }
+  
+    .titulo_receita {
+      font-size: 30px;
+    }
+  }
+
+  
+  
+  @media screen and (max-width: 1000px) {
+  
+    .slideshow-container {
+      margin-top: 15px;
+      width: 80%;
+      margin-top: 19%;
+    }
+  
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  
+    .offcanvas {
+      width: 26vh;
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    .slideshow-container {
+      margin-top: 19%;
+      width: 80%;
+    }
+  
+    .mySlides img {
+      border-radius: 0;
+    }
+  }
+  
+  @media screen and (min-width: 785px) {
+    .offcanvas-btn {
+      display: none;
+    }
+  }

@@ -62,6 +62,7 @@
   min-height: 40%;
   margin-top: 30px;
   margin: auto;
+  background-color: #cfcfcf;
 }
 
 .close{
@@ -264,4 +265,269 @@
     word-wrap: break-word;
   }
 
+  /* MODAL */
+
+.modal{
+  height: 100vh;
+  width: 100vw;
+  max-height: none;
+  margin-top: 50px;
+}
+
+.modal-dialog{
+  height: 100vh;
+  width: 100vw;
+  max-width: none;
+  max-height: none;
+}
+
+.modal-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  max-width: 85%;
+  min-height: 80%;
+  margin-top: 30px;
+  margin: auto;
+}
+
+.close{
+  margin-top: 5px;
+  right: 0px;
+  left: 845px;
+  top: -15px;
+}
+
+.modal-title{
+  margin-top: 20px;
+  margin-bottom: 2px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.modal-body{
+  height: 100%;
+  margin: 20px 30px;
+
+  & ol, li{
+    text-decoration: none;
+    list-style: none;
+  }
+
+  & ol{
+    font-size: 18px;
+  }
+
+  & li{
+    font-size: 15px;
+    margin-top: 5px;
+  }
+}
+
+.modal-body ol li:first-child{
+  margin-top: 5px;
+}
+
+.modal-body ol:last-child{
+  margin-top: 20px;
+}
+
+.modal-footer{
+  margin-bottom: 15px;
+
+  & button{
+    margin: 0px 10px;
+    padding: 3px;
+  }
+
+}
+
+}
+
+@media screen and (min-width: 999px) and (max-width: 1065px) {
+  .close{
+    margin-top: 5px;
+    right: 0px;
+    left: 94%;
+    top: -15px;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 999px) {
+  .modal{
+    height: 100vh;
+    width: 100vw;
+    max-height: none;
+    margin-top: 50px;
+  }
+
+  .button_modal{
+    font-size: 20px;
+    color: black;
+  }
+  
+  .modal-dialog{
+    height: 100vh;
+    width: 100vw;
+    max-width: none;
+    max-height: none;
+  }
+  
+  .modal-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 900px;
+    max-width: 85%;
+    min-height: 80%;
+    margin-top: 30px;
+    margin: auto;
+  }
+  
+  .close{
+    margin-top: 5px;
+    right: 0px;
+    left: 92%;
+    top: -15px;
+  }
+  
+  .modal-title{
+    margin-top: 20px;
+    margin-bottom: 2px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  .modal-body{
+    height: 100%;
+    margin: 20px 30px;
+  
+    & ol, li{
+      text-decoration: none;
+      list-style: none;
+    }
+  
+    & ol{
+      font-size: 18px;
+    }
+  
+    & li{
+      font-size: 15px;
+      margin-top: 5px;
+    }
+  }
+  
+  .modal-body ol li:first-child{
+    margin-top: 5px;
+  }
+  
+  .modal-body ol:last-child{
+    margin-top: 20px;
+  }
+  
+  .modal-footer{
+    margin-bottom: 15px;
+  
+    & button{
+      margin: 0px 10px;
+      padding: 3px;
+    }
+  
+  }
+
+  .preparo{
+    margin-top: 50px;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 699px) {
+  .modal{
+    height: 100vh;
+    width: 100vw;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .button_modal{
+    font-size: 20px;
+    color: black;
+  }
+  
+  .modal-dialog{
+    height: 100vh;
+    width: 100vw;
+    max-width: none;
+    max-height: none;
+  }
+  
+  .modal-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 900px;
+    max-width: 100%;
+    min-height: 80%;
+    margin-top: 30px;
+    margin: auto;
+  }
+  
+  .close{
+    margin-top: 5px;
+    right: 0px;
+    left: 85%;
+    top: -15px;
+  }
+  
+  .modal-title{
+    margin-top: 20px;
+    margin-bottom: 2px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  
+  .modal-body{
+    height: 100%;
+    margin: 20px 30px;
+  
+    & ol, li{
+      text-decoration: none;
+      list-style: none;
+    }
+  
+    & ol{
+      font-size: 18px;
+    }
+  
+    & li{
+      font-size: 15px;
+      margin-top: 5px;
+    }
+  }
+  
+  .modal-body ol li:first-child{
+    margin-top: 5px;
+  }
+  
+  .modal-body ol:last-child{
+    margin-top: 20px;
+  }
+  
+  .modal-footer{
+    margin-bottom: 15px;
+  
+    & button{
+      margin: 0px 10px;
+      padding: 3px;
+    }
+  
+  }
+
+  .preparo{
+    margin-top: 50px;
+  }
 }

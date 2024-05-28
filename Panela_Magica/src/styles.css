@@ -122,10 +122,6 @@ html {
 /* fim da navbar */
 
 /* btn hamburguer */
-.offcanvas-btn {
-  display: inline-block;
-  cursor: pointer;
-}
 
 .bar1,
 .bar2,
@@ -155,84 +151,7 @@ html {
 /* btn hamburguer */
 
 /* offcanvas */
-.offcanvas {
-  position: fixed;
-  top: 0;
-  left: -300px;
-  width: 300px;
-  height: 100%;
-  overflow-x: hidden;
-  transition: 0.3s;
-  z-index: 1;
-}
 
-.offcanvas a:hover {
-  color: var(--cor-hover);
-  transition: color 0.3s ease-in-out;
-}
-
-.menu-btn {
-  color: rgb(255, 255, 255);
-  cursor: pointer;
-}
-
-.offcanvas.active {
-  left: 0;
-}
-
-.offcanvas-content {
-  padding: 20px;
-}
-
-.offcanvas-content a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  margin-bottom: 10px;
-  font-size: 24px;
-}
-
-.offcanvas-toggle {
-  display: none;
-}
-
-.offcanvas ul {
-  position: relative;
-  float: left;
-  list-style-type: none;
-}
-
-.offcanvas a {
-  display: block;
-  padding: 10px;
-  text-decoration: none;
-  color: #fff;
-}
-
-.offcanvas a:hover {
-  color: var(--cor-hover);
-}
-
-.offcanvas li ul {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  display: none;
-  background-color: var(--bg-cor);
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
-.offcanvas li:hover ul,
-.offcanvas li.over ul {
-  display: block;
-}
-
-.offcanvas li ul li {
-  display: block;
-  width: 100%;
-}
 
 /* fim offcanvas */
 
@@ -380,10 +299,6 @@ body::-webkit-scrollbar-thumb {
     /* margin-top: 20px; */
   }
 
-  .offcanvas .nome-logo {
-    font-size: 25px;
-  }
-
   .slideshow-container {
     margin-top: 15px;
     width: 390px;
@@ -395,10 +310,6 @@ body::-webkit-scrollbar-thumb {
 
   .search-bar {
     display: none;
-  }
-
-  .offcanvas-toggle {
-    display: block;
   }
 
   .copyright {
@@ -428,10 +339,6 @@ body::-webkit-scrollbar-thumb {
     padding: 0;
     box-sizing: border-box;
   }
-
-  .offcanvas {
-    width: 26vh;
-  }
 }
 
 @media screen and (max-width: 900px) {
@@ -445,8 +352,4 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-@media screen and (min-width: 785px) {
-  .offcanvas-btn {
-    display: none;
-  }
-}
+
