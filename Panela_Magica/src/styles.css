@@ -1,0 +1,355 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap');
+
+/* essencial */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #FFF5E0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* variaveis css (cor, fonte, e outros) */
+:root {
+  --cor-primaria: #242333;
+  --cor-hover: #5C4AFF;
+
+  /* dropdown */
+  --bg-cor: #000000;
+  --font-color: #fff;
+  --hover-bg: rgb(47, 0, 255);
+}
+
+/* essencial */
+
+/* navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--cor-primaria);
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.logo img {
+  height: 60px;
+  border-radius: 100%;
+}
+
+.nome-logo {
+  text-decoration: none;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 34px;
+  font-family: "Emilys Candy", serif;
+  font-weight: 400;
+  font-style: normal;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.search-bar {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.input-container {
+  width: 20px;
+  position: relative;
+}
+
+.input {
+  width: 50%;
+  height: 40px;
+  padding: 10px;
+  transition: .2s linear;
+  border: 2.5px solid black;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 25px;
+}
+
+.input:focus {
+  outline: none;
+  border: 0.5px solid black;
+  box-shadow: -5px -5px 0px black;
+}
+
+@keyframes anim {
+
+  0%,
+  100% {
+    transform: translateY(calc(-50% - 5px)) scale(1);
+  }
+
+  50% {
+    transform: translateY(calc(-50% - 5px)) scale(1.1);
+  }
+}
+
+.links {
+  display: flex;
+}
+
+.links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 10px;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: var(--cor-hover);
+
+}
+
+/* fim da navbar */
+
+/* btn hamburguer */
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #ffffff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+/* btn hamburguer */
+
+/* offcanvas */
+
+
+/* fim offcanvas */
+
+/* carrossel */
+.slideshow-container {
+  max-width: 850px;
+  position: relative;
+  margin: auto;
+  margin-top: 150px;
+}
+
+.mySlides {
+  display: none;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 30px 30px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 30px 0 0 30px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.active,
+.dot:hover {
+  background-color: var(--cor-primaria);
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+/*  fim do carrossel */
+
+
+/* footer */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  background-color: var(--cor-primaria);
+  padding: 24px;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.copy {
+  margin-bottom: 10px;
+  color: white;
+  flex-grow: 1;
+  text-align: center;
+  font-size: 20px;
+}
+
+.copy a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.copy a:hover {
+  color: rgb(0, 204, 255);
+}
+
+/* fim do footer */
+
+/* scroll bar */
+body {
+  --sb-track-color: #ffffff;
+  --sb-thumb-color: #000603;
+  --sb-size: 5px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 1px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 1px;
+
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+
+/* fim scroll bar */
+
+/* media querys */
+@media screen and (max-width: 768px) {
+
+  .navbar {
+    width: 100%;
+  }
+
+  .nome-logo {
+    font-size: 30px;
+    /* margin-top: 20px; */
+  }
+
+  .slideshow-container {
+    margin-top: 15px;
+    width: 390px;
+  }
+
+  .links {
+    display: none;
+  }
+
+  .search-bar {
+    display: none;
+  }
+
+  .copyright {
+    padding: 12px;
+    padding-bottom: 0;
+  }
+
+  .copy {
+    font-size: 16px;
+  }
+
+  .titulo_receita {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+
+  .slideshow-container {
+    margin-top: 15px;
+    width: 80%;
+    margin-top: 19%;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .slideshow-container {
+    margin-top: 19%;
+    width: 80%;
+  }
+
+  .mySlides img {
+    border-radius: 0;
+  }
+}
+
+
