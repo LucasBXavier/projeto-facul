@@ -83,7 +83,7 @@
 }
 
 .modal-body{
-  height: 100%;
+  height: auto;
   margin: 10px 30px;
 
   & ol, li{
@@ -367,14 +367,14 @@
     font-size: 20px;
     color: black;
   }
-  
+
   .modal-dialog{
     height: 100vh;
     width: 100vw;
     max-width: none;
     max-height: none;
   }
-  
+
   .modal-content{
     display: flex;
     justify-content: center;
@@ -385,14 +385,14 @@
     margin-top: 30px;
     margin: auto;
   }
-  
+
   .close{
     margin-top: 5px;
     right: 0px;
     left: 92%;
     top: -15px;
   }
-  
+
   .modal-title{
     margin-top: 20px;
     margin-bottom: 2px;
@@ -400,42 +400,42 @@
     font-size: 25px;
     font-weight: bold;
   }
-  
+
   .modal-body{
     height: 100%;
     margin: 20px 30px;
-  
+
     & ol, li{
       text-decoration: none;
       list-style: none;
     }
-  
+
     & ol{
       font-size: 18px;
     }
-  
+
     & li{
       font-size: 15px;
       margin-top: 5px;
     }
   }
-  
+
   .modal-body ol li:first-child{
     margin-top: 5px;
   }
-  
+
   .modal-body ol:last-child{
     margin-top: 20px;
   }
-  
+
   .modal-footer{
     margin-bottom: 15px;
-  
+
     & button{
       margin: 0px 10px;
       padding: 3px;
     }
-  
+
   }
 
   .preparo{
@@ -456,14 +456,14 @@
     font-size: 20px;
     color: black;
   }
-  
+
   .modal-dialog{
     height: 100vh;
     width: 100vw;
     max-width: none;
     max-height: none;
   }
-  
+
   .modal-content{
     display: flex;
     justify-content: center;
@@ -474,14 +474,14 @@
     margin-top: 30px;
     margin: auto;
   }
-  
+
   .close{
     margin-top: 5px;
     right: 0px;
     left: 85%;
     top: -15px;
   }
-  
+
   .modal-title{
     margin-top: 20px;
     margin-bottom: 2px;
@@ -489,42 +489,42 @@
     font-size: 25px;
     font-weight: bold;
   }
-  
+
   .modal-body{
     height: 100%;
     margin: 20px 30px;
-  
+
     & ol, li{
       text-decoration: none;
       list-style: none;
     }
-  
+
     & ol{
       font-size: 18px;
     }
-  
+
     & li{
       font-size: 15px;
       margin-top: 5px;
     }
   }
-  
+
   .modal-body ol li:first-child{
     margin-top: 5px;
   }
-  
+
   .modal-body ol:last-child{
     margin-top: 20px;
   }
-  
+
   .modal-footer{
     margin-bottom: 15px;
-  
+
     & button{
       margin: 0px 10px;
       padding: 3px;
     }
-  
+
   }
 
   .preparo{

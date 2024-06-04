@@ -67,6 +67,9 @@ namespace PanelaMagica.API.Data.Migrations
                     b.Property<string>("NomeDaReceita")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Preparo")
+                        .HasColumnType("TEXT");
+
                     b.HasKey("ReceitaId");
 
                     b.ToTable("Receitas");

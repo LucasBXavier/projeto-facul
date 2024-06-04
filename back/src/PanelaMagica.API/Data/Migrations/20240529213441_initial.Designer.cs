@@ -10,8 +10,8 @@ using PanelaMagica.API.Data;
 namespace PanelaMagica.API.Data.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240327011319_att")]
-    partial class att
+    [Migration("20240529213441_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -67,6 +67,9 @@ namespace PanelaMagica.API.Data.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("NomeDaReceita")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Preparo")
                         .HasColumnType("TEXT");
 
                     b.HasKey("ReceitaId");

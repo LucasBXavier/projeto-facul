@@ -11,7 +11,7 @@ export class CarrosselComponent implements OnInit, OnDestroy {
     { src: "assets/image/hamburguer.jpg", alt: "Hambúrguer" },
     { src: "assets/image/strogonoff.jpg", alt: "Strogonoff" },
     { src: "assets/image/brownie.jpg", alt: "brownie"},
-    {src: "assets/image/bolo_cenoura.jpg", alt: "bolo de cenoura"}
+    { src: "assets/image/bolo_cenoura.jpg", alt: "bolo de cenoura"}
   ];
   currentIndex = 0;
   interval: any;

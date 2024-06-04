@@ -4,7 +4,7 @@
 
 namespace PanelaMagica.API.Data.Migrations
 {
-    public partial class att : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -28,6 +28,7 @@ namespace PanelaMagica.API.Data.Migrations
                     Ingrediente11 = table.Column<string>(type: "TEXT", nullable: true),
                     Ingrediente12 = table.Column<string>(type: "TEXT", nullable: true),
                     Ingrediente13 = table.Column<string>(type: "TEXT", nullable: true),
+                    Preparo = table.Column<string>(type: "TEXT", nullable: true),
                     ImagemURL = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>

@@ -23,7 +23,7 @@ namespace PanelaMagica.API
             services.AddCors();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ProEventos.API", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "PanelaMagica.API", Version = "v1" });
             });
         }
 

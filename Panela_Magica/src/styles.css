@@ -160,7 +160,7 @@ html {
   max-width: 850px;
   position: relative;
   margin: auto;
-  margin-top: 150px;
+  margin-top: 110px;
 }
 
 .mySlides {
@@ -301,7 +301,7 @@ body::-webkit-scrollbar-thumb {
 
   .slideshow-container {
     margin-top: 15px;
-    width: 390px;
+    width: 100%;
   }
 
   .links {
@@ -331,7 +331,9 @@ body::-webkit-scrollbar-thumb {
   .slideshow-container {
     margin-top: 15px;
     width: 80%;
+    height: 80%;
     margin-top: 19%;
+    border-radius: 0;
   }
 
   body {
@@ -345,6 +347,7 @@ body::-webkit-scrollbar-thumb {
   .slideshow-container {
     margin-top: 19%;
     width: 80%;
+    height: 80%;
   }
 
   .mySlides img {

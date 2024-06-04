@@ -1,6 +1,6 @@
 .slideshow-container{
     & img{
-        border-radius: 20px;
+        border-radius: 0px;
         width: 100%;
         width: 100%;
     }
@@ -12,6 +12,7 @@
 
 @media screen and (max-width: 500px){
     .slideshow-container{
-        margin-top: 100px;
+        margin-top: 80px;
+        width: 100%;
     }
 }

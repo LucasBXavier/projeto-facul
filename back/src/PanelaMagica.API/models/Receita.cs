@@ -17,6 +17,7 @@ namespace PanelaMagica.API.Models
         public string? Ingrediente11 { get; set; }
         public string? Ingrediente12 { get; set; }
         public string? Ingrediente13 { get; set; }
+        public string? Preparo { get; set; }
         public string? ImagemURL { get; set; }
 
     }
