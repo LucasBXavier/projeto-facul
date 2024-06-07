@@ -1,11 +1,12 @@
 {
   "Version": 1,
-  "Hash": "LgnOkCdnOQDITLNK+q+5P2ykTYfbUdmafAzXQoi89+0=",
+  "Hash": "GVkNnfh0YxrxhxsYwItVNbYGD2fD/1hwPDRXQ5wnjUU=",
   "Source": "PanelaMagica.API",
   "BasePath": "_content/PanelaMagica.API",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [],
-  "Assets": []
+  "Assets": [],
+  "Endpoints": []
 }

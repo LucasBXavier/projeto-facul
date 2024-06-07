@@ -1,15 +1,59 @@
 /* navbar */
+nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.best_site{
+  content: '';
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  height: 100px;
+  background-color: var(--cor-primaria);
+  position: absolute;
+  left: -200px;
+  top: 100px;
+  transform: rotate(-30deg);
+  text-transform: uppercase;
+  z-index: -50;
+  animation: sumir 3s ease-in-out 0s forwards;
+
+  & p{
+    margin: 0;
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
+
+@keyframes sumir{
+  0%{
+    opacity: 1;
+    background-color: #00ff0d;
+    z-index: -50;
+  }
+
+  100%{
+    opacity: 0;
+    z-index: -50;
+    background-color: #00ff0d;
+  }
+}
+
 .navbar {
     position: fixed;
     top: 0;
-    left: 0;
     z-index: 999;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     background-color: var(--cor-primaria);
     padding: 10px 20px;
+    opacity: 1;
 }
 
 .logo{
@@ -37,12 +81,12 @@
 }
   
 .search-bar {
-    flex-grow: 1;
+    width: calc(80% - 321px - 51px);
     text-align: center;
 }
   
 .input {
-    width: 50%;
+    width: 80%;
     height: 40px;
     padding: 10px;
     transition: .2s linear;
@@ -69,6 +113,8 @@
     padding: 0 10px;
     font-size: 20px;
     transition: color 0.3s ease;
+    text-transform: uppercase;
+    font-weight: 500;
 }
   
 .links a:hover {
