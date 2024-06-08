@@ -190,6 +190,7 @@
   margin-top: 5px;
   text-align: center;
   word-wrap: break-word;
+  word-break: break-word;
   color: #000;
 }
 
@@ -214,7 +215,7 @@
     column-count: 2;
     column-gap: 2%;
     display: inline-block;
-    width: 95%;
+    width: 90%;
   }
 
   #img-card-img-format img {
