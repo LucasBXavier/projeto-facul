@@ -6,13 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
-  toggleOffcanvas(): void {
-    const menuBtn = document.querySelector('#offcanvas-btn');
-    const offcanvas = document.querySelector('#offcanvas');
-    
-    if (menuBtn && offcanvas) {
+  toggleofcanvas(): void {
+    const menuBtn = document.querySelector('#ofcanvas-btn');
+    const ofcanvas = document.querySelector('#ofcanvas');
+
+    if (menuBtn && ofcanvas) {
       menuBtn.classList.toggle('change');
-      offcanvas.classList.toggle('active');
+      ofcanvas.classList.toggle('active');
     }
   }
 }
