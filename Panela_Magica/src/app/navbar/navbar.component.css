@@ -83,8 +83,8 @@ nav{
 .search-bar {
     width: calc(80% - 321px - 51px);
     text-align: center;
-    width: 50%;
-    margin-right: 120px;
+    justify-self: center;
+    align-self: center;
 }
 
 .input {
