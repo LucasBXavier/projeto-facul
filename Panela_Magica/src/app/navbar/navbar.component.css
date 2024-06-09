@@ -7,7 +7,7 @@ nav{
 
 .best_site{
   content: '';
-  color: rgb(0, 0, 0);
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,14 +32,12 @@ nav{
 @keyframes sumir{
   0%{
     opacity: 1;
-    background-color: #00ff0d;
     z-index: -50;
   }
 
   100%{
     opacity: 0;
     z-index: -50;
-    background-color: #00ff0d;
   }
 }
 
@@ -81,14 +79,15 @@ nav{
 }
 
 .search-bar {
-    width: calc(80% - 321px - 51px);
+  display: flex;
+    width: calc(65% - 321px - 51px);
     text-align: center;
     justify-self: center;
     align-self: center;
 }
 
 .input {
-    width: 80%;
+    width: 95%;
     height: 40px;
     padding: 10px;
     transition: .2s linear;
@@ -117,10 +116,15 @@ nav{
     transition: color 0.3s ease;
     text-transform: uppercase;
     font-weight: 500;
+    font-family: "Emilys Candy", serif;
 }
 
 .links a:hover {
-    color: var(--cor-hover);
+    color: #f5f54f;
+}
+
+.links_a_hover{
+  color: white;
 }
 
 /* btn hamburguer */
@@ -168,7 +172,16 @@ nav{
 }
 
 .ofcanvas-content {
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.ofcanvas-content hr{
+  text-align: center;
+  width: 50%;
+  color: white;
+  margin-left: 20px;
 }
 
 .ofcanvas-content a {
@@ -177,6 +190,7 @@ nav{
     text-decoration: none;
     margin-bottom: 10px;
     font-size: 24px;
+    font-family: "Emilys Candy", serif;
 }
 
 .ofcanvas ul {
@@ -186,14 +200,48 @@ nav{
 }
 
 .ofcanvas a {
-    display: block;
+    display: flex;
+    align-items: center;
     padding: 10px;
     text-decoration: none;
     color: #fff;
+    letter-spacing: 2px;
+}
+
+.ofcanvas a span{
+  margin-left: 15px;
+  animation: girar_emoji_canvas 3s linear infinite;
+}
+
+.ofcanvas_emoji{
+  animation: girar_emoji_canvas1 3s linear infinite;
+  display: flex;
+  margin-left: 15px;
+
+  & p{
+    margin: 0;
+  }
+}
+
+#fitness_emoji{
+  transform: rotateY(180deg);
+  margin: 0;
+}
+
+@keyframes girar_emoji_canvas{
+  0%{ transform: rotateY(0deg);
+  }
+  100%{ transform: rotateY(360deg);}
+}
+
+@keyframes girar_emoji_canvas1{
+  0%{ transform: rotateY(0deg);
+  }
+  100%{ transform: rotateY(360deg);}
 }
 
 .ofcanvas a:hover {
-    color: var(--cor-hover);
+    color: #f5f54f;
 }
 
 .ofcanvas li ul {
@@ -267,10 +315,10 @@ nav{
     transition: color 0.3s ease;
   }
 
-  .links a:hover {
+  /* .links a:hover {
     color: var(--cor-hover);
 
-  }
+  } */
 
 
   /* media querys */
@@ -280,8 +328,14 @@ nav{
       width: 100%;
     }
 
+    .logo{
+      margin-right: 10px;
+      width: 80%;
+    }
+
     .nome-logo {
-      font-size: 30px;
+      font-size: 25px;
+      margin-left: 5px;
       /* margin-top: 20px; */
     }
 
@@ -302,8 +356,37 @@ nav{
       display: none;
     }
 
+    .ofcanvas{
+     min-width: 100%;
+    }
+
+    .ofcanvas-btn{
+      z-index: 990;
+    }
+
     .ofcanvas-toggle {
       display: block;
+    }
+
+    .ofcanvas_copyright{
+      margin-top: 50px;
+      width: 80%;
+      align-self: center;
+      color: transparent;
+
+      & p{
+        font-size: 20px;
+      }
+    }
+
+    .ofcanvas.active .ofcanvas_copyright{
+      & p{
+        color: #5a5a5a93;
+      }
+    }
+
+    .ofcanvas-content hr{
+      width: 10rem;
     }
 
     .copyright {
