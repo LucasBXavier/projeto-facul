@@ -82,8 +82,6 @@ nav{
   display: flex;
     width: calc(65% - 321px - 51px);
     text-align: center;
-    justify-self: center;
-    align-self: center;
 }
 
 .input {
